@@ -7,43 +7,55 @@
         <vm:MainViewModel />
     </ContentPage.BindingContext>
 
-    <StackLayout Padding="20">
+    <ScrollView Padding="20">
 
-        <!-- Campos para ingresar los productos -->
-        <Entry Placeholder="Producto 1" 
+        <VerticalStackLayout>
+
+            <!-- Campos para ingresar los productos -->
+            <Label Text="Producto 1"/>
+            <Entry Placeholder="Producto 1" 
                Keyboard="Numeric" 
                Text="{Binding Producto1}" />
 
-        <Entry Placeholder="Producto 2" 
+            <Label Text="Producto 2"/>
+            <Entry Placeholder="Producto 2" 
                Keyboard="Numeric" 
                Text="{Binding Producto2}" />
 
-        <Entry Placeholder="Producto 3" 
+
+            <Label Text="Producto 3"/>
+            <Entry Placeholder="Producto 3" 
                Keyboard="Numeric" 
                Text="{Binding Producto3}" />
 
-        <!-- Campo de solo lectura para el subtotal -->
-        <Entry IsReadOnly="True" 
+
+            <Label Text="Subtotal"/>
+            <!-- Campo de solo lectura para el subtotal -->
+            <Entry IsReadOnly="True" 
                Placeholder="Subtotal" 
                Text="{Binding Subtotal}" />
 
-        <!-- Campo de solo lectura para el descuento -->
-        <Entry IsReadOnly="True" 
+            <Label Text="Descuento"/>
+            <!-- Campo de solo lectura para el descuento -->
+            <Entry IsReadOnly="True" 
                Placeholder="Descuento" 
                Text="{Binding Descuento}" />
 
-        <!-- Campo de solo lectura para el total a pagar -->
-        <Entry IsReadOnly="True" 
+            <Label Text="Total"/>
+            <!-- Campo de solo lectura para el total a pagar -->
+            <Entry IsReadOnly="True" 
                Placeholder="Total a Pagar" 
                Text="{Binding TotalPagar}" />
 
-        <!-- Botón para calcular -->
-        <Button Text="Calcular"
+            <!-- Botón para calcular -->
+            <Button Text="Calcular"
                 Command="{Binding CalcularCommand}" />
 
-        <!-- Botón para limpiar -->
-        <Button Text="Limpiar"
+            <!-- Botón para limpiar -->
+            <Button Text="Limpiar"
                 Command="{Binding LimpiarCommand}" />
 
-    </StackLayout>
+        </VerticalStackLayout>
+
+    </ScrollView>
 </ContentPage>
